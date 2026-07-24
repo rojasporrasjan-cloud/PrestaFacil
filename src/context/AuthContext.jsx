@@ -31,14 +31,26 @@ export function AuthProvider({ children }) {
           
           // Suscripción en tiempo real al perfil
           if (profileUnsubscribe) profileUnsubscribe();
+          
+          let isFirstLoad = true;
+          
           profileUnsubscribe = subscribeToUserProfile(firebaseUser.uid, (profile) => {
-            if (isMounted) setUserProfile(profile);
+            if (isMounted) {
+              setUserProfile(profile);
+              if (isFirstLoad) {
+                isFirstLoad = false;
+                setLoading(false);
+                clearTimeout(fallbackTimer);
+              }
+            }
           });
           
         } else {
           if (isMounted) {
             setUser(null);
             setUserProfile(null);
+            setLoading(false);
+            clearTimeout(fallbackTimer);
           }
           if (profileUnsubscribe) {
             profileUnsubscribe();
@@ -47,7 +59,6 @@ export function AuthProvider({ children }) {
         }
       } catch (error) {
         console.error('Error processing auth state change:', error);
-      } finally {
         if (isMounted) {
           setLoading(false);
           clearTimeout(fallbackTimer);
