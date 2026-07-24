@@ -1,0 +1,204 @@
+.dashboard-greeting {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+/* ── Stat Cards ── */
+.stat-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.stat-card--primary::before { background: var(--primary); }
+.stat-card--info::before { background: var(--info); }
+.stat-card--success::before { background: var(--success); }
+.stat-card--warning::before { background: var(--warning); }
+.stat-card--danger::before { background: var(--danger); }
+
+.stat-card--full {
+  grid-column: 1 / -1;
+}
+
+.stat-card--danger {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+}
+
+.stat-card-icon {
+  font-size: 20px;
+  margin-bottom: var(--space-2);
+}
+
+.stat-card-label {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-card-value {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text);
+  line-height: var(--leading-tight);
+}
+
+.stat-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.stat-card-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--danger);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+
+.stat-card-count-number {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-card-count-label {
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Fund Card ── */
+.fund-card {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  color: white;
+  margin-top: var(--space-3);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.fund-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.fund-card-icon {
+  font-size: 20px;
+}
+
+.fund-card-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.fund-card-value {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+}
+
+.fund-card-desc {
+  font-size: var(--text-xs);
+  opacity: 0.7;
+  margin-bottom: var(--space-4);
+}
+
+.fund-card-details {
+  display: flex;
+  gap: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fund-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fund-card-detail .text-muted {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-xs);
+}
+
+.fund-card-detail .font-semibold {
+  color: white;
+  font-size: var(--text-sm);
+}
+
+.fund-card-detail .status-overdue {
+  color: #fca5a5;
+}
+
+/* ── Upcoming Payments ── */
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.upcoming-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+.upcoming-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.upcoming-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upcoming-date {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.upcoming-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.upcoming-amount {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text);
+}

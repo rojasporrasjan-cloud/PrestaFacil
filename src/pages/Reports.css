@@ -1,0 +1,29 @@
+.report-empty {
+  text-align: center;
+  padding: var(--space-12);
+}
+
+.report-card {
+  text-align: center;
+  padding: var(--space-4);
+}
+
+.report-card-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.report-card-value {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.chart-card {
+  padding: var(--space-4) var(--space-2);
+  margin-top: var(--space-3);
+}

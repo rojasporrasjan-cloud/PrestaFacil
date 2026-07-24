@@ -1,0 +1,114 @@
+/* Filter Chips */
+.filter-chips {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+
+.filter-chip {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  white-space: nowrap;
+  transition: all var(--duration-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-chip--active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Loans List */
+.loans-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.loan-card {
+  padding: var(--space-4);
+}
+
+.loan-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+}
+
+.loan-card-client {
+  flex: 1;
+  min-width: 0;
+}
+
+.loan-card-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loan-card-date {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.loan-card-amounts {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.loan-card-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.loan-card-amount-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.loan-card-amount-value {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--bg);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--ease-out);
+}
+
+.loan-card-progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-1);
+}

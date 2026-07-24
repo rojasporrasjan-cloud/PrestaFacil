@@ -1,0 +1,70 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: var(--z-modal-backdrop);
+  display: flex;
+  align-items: flex-end;
+  animation: fadeIn var(--duration-fast) ease-out;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  z-index: var(--z-modal);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.modal-drag-handle {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+}
+
+.modal-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text);
+  padding-top: var(--space-2);
+}
+
+.modal-close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  transition: background var(--duration-fast);
+  margin-top: var(--space-2);
+}
+.modal-close:hover {
+  background: var(--surface-active);
+}
+
+.modal-body {
+  padding: var(--space-4);
+  overflow-y: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
