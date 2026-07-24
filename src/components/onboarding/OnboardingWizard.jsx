@@ -69,7 +69,6 @@ export default function OnboardingWizard() {
                 value={appName} 
                 onChange={e => setAppName(e.target.value)} 
                 placeholder="Ej: Préstamos Fernanda" 
-                autoFocus 
               />
             </div>
             <button className="btn btn--primary btn--block" onClick={() => setStep(2)}>
@@ -95,7 +94,6 @@ export default function OnboardingWizard() {
                 onChange={e => setCash(e.target.value)} 
                 placeholder="Ej: 500000" 
                 min="0"
-                autoFocus 
               />
             </div>
             <div style={{ display: 'flex', gap: 'var(--space-2)' }}>

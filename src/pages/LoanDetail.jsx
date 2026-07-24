@@ -304,7 +304,6 @@ export default function LoanDetail() {
             onChange={e => setPaymentAmount(e.target.value)}
             min="0"
             id="payment-amount-input"
-            autoFocus
           />
           {amountToCollect > 0 && loan.remainingBalance > 0 && (
             <div style={{ display: 'flex', gap: '8px', marginTop: '8px' }}>

@@ -147,7 +147,6 @@ export default function LoanForm({ isOpen, onClose, initialClientId = '' }) {
               placeholder="Ej: Juan Pérez"
               value={newClientName}
               onChange={e => setNewClientName(e.target.value)}
-              autoFocus
             />
           </div>
           <div className="input-group" style={{ marginBottom: 0 }}>

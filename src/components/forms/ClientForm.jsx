@@ -56,7 +56,6 @@ export default function ClientForm({ isOpen, onClose }) {
           value={name}
           onChange={e => setName(e.target.value)}
           id="client-name-input"
-          autoFocus
         />
       </div>
 
